@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['task', 'Hours per Day'],
+          ['Bihar', 1986  ],
+          ['Jharkhand',  3420],
+          ['Odisha',  4370],
+          ['West Bengal', 3222],
+          ['Meghalaya',  308],
+          ['Assam', 5193],
+          ['Nagaland', 28],
+          ['Arunachal pradesh', 189],
+          ['Mizoram', 117],          
+
+        ]);
+
+        var options = {
+          title: 'Total Rape Cases in Three years from Eastern region',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+    <div class="chart"></div>
+        }
+    </div>
+  </body>
+</html> 
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'year-2017', 'year-2018', 'year-2019'],
+          ['Biharr', 605, 651, 730],
+          ['Jharkhand', 914, 1090, 1416],
+          ['Odisha', 2070, 918, 1382],
+          ['West bengal', 1089, 1069, 1069],
+          ['Meghalaya', 119, 87, 102],
+          ['Assam', 1772, 1648, 1773],
+          ['Nagaland', 10, 10, 8],
+          ['Arunachal pradesh', 59, 67, 63],
+          ['Mizoram', 25, 50, 42],
+
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Rape cases in Eastern Region',
+            subtitle: '3 year data',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['task', 'Hours per Day'],
+          ['Rajasthan',  13637],
+          ['Madhya Pradesh', 13482],
+          ['Gujarat',  1558],
+          ['Maharashtra', 6374],
+          ['Chhattisgarh',  5035],
+        
+          
+
+        ]);
+
+        var options = {
+          title: 'Total Rape Cases in Three years from Western region',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+    <div class="chart"></div>
+        }
+    </div>
+  </body>
+</html> 
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'year-2017', 'year-2018', 'year-2019'],
+          ['Rajasthan', 3305, 4335, 5997],
+          ['Madhya Pradesh', 5562, 5433, 2487],
+          ['Gujarat', 477, 553, 528],
+          ['Maharashtra', 1933, 2142, 2299],
+          ['Chhattisgarh', 1908, 2091, 1036],
+          
+
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Rape cases in Western Region',
+            subtitle: '3 year data',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+  </body>
+</html>

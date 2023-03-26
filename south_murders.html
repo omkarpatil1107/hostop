@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['task', 'Hours per Day'],
+            ['Karnatak',  4102],
+            ['Telangana',   2403],
+            ['Andhra Pradesh', 2859],
+            ['Tamil nadu', 4874],
+            ['Kerela',  920],
+            
+  
+          ]);
+  
+          var options = {
+            title: 'Total Murder Cases in Three years from southern region',
+            is3D: true,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+      <div class="chart"></div>
+          }
+      </div>
+    </body>
+  </html> 
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['State', 'year-2017', 'year-2018', 'year-2019'],
+            ['karnataka', 1384, 1334, 1384 ],
+            ['Telangana', 805, 786, 839],
+            ['Andhra Pradesh', 1054, 935, 870],
+            ['Tamil Nadu', 1560, 1569, 1745],
+            ['kerela', 292, 305, 323],
+  
+          ]);
+  
+          var options = {
+            chart: {
+              title: 'Murder cases in Southern Region',
+              subtitle: '3 year data',
+            }
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+  
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+      </script>
+    </head>
+    
+    <body>
+      <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+    </body>
+  </html>
+  

@@ -1,0 +1,83 @@
+
+<html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['task', 'Hours per Day'],
+            ['Bihar',  8875],
+            ['Jharkhand', 4825],
+            ['Odhisha',  1356],
+            ['West Bengal', 5910],
+            ['Meghalaya',  250],
+            ['Assam', 3620],
+            ['Nagaland', 92],
+            ['Arunachal Pradesh', 201],
+            ['Mizoram', 70]
+
+
+
+  
+          ]);
+  
+          var options = {
+            title: 'Total Murder Cases in Three years from Eastern region',
+            is3D: true,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+      <div class="chart"></div>
+          }
+      </div>
+    </body>
+  </html> 
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['State', 'year-2017', 'year-2018', 'year-2019'],
+        ['Bihar', 2803, 2934, 3138],
+        ['Jharkhand', 1487, 1712, 1626],
+        ['odhisha', 1267, 1378, 1356],
+        ['West Bengal', 2001, 1933, 1976],
+        ['Meghalay', 87, 98, 65],
+        ['Assam', 1144, 1241, 1235],
+        ['Nagaland', 36, 31, 25],
+        ['Arunachal pradesh', 79, 60, 62 ],
+        ['Mizoram', 21, 22, 27 ]
+
+
+
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Murder cases in Eastern Region',
+          subtitle: '3 year data',
+        }
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
+</head>
+
+<body>
+  <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+</body>
+</html>

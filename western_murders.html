@@ -1,0 +1,72 @@
+
+<html>
+    <head>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['task', 'Hours per Day'],
+            ['Rajasthan',  4640],
+            ['Madhya Pradesh',  5582],
+            ['Gujarat', 3015],
+            ['Maharashtra', 6444],
+            ['Chattishgarh',  2749],
+            
+  
+          ]);
+  
+          var options = {
+            title: 'Total Murder Cases in Three years from Western region',
+            is3D: true,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+        }
+      </script>
+    </head>
+    <body>
+      <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+      <div class="chart"></div>
+          }
+      </div>
+    </body>
+  </html> 
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+  
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['State', 'year-2017', 'year-2018', 'year-2019'],
+            ['Rajasthan', 1473, 1508, 1659 ],
+            ['Madhya Pradesh', 1908, 1879, 1795],
+            ['Gujarat', 970, 1072, 973],
+            ['Maharashtra', 2103, 2199, 2142],
+            ['Chattishgarh', 919, 917, 913],
+  
+          ]);
+  
+          var options = {
+            chart: {
+              title: 'Murder cases in Western Region',
+              subtitle: '3 year data',
+            }
+          };
+  
+          var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+  
+          chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+      </script>
+    </head>
+    
+    <body>
+      <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+    </body>
+  </html>
+  

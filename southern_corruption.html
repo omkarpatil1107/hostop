@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['task', 'Hours per Day'],
+          ['Karnataka',  1046],
+          ['Telangana',   371],
+          ['Andhra Pradesh',  473],
+          ['Tamil Nadu', 939],
+          ['Kerala',  329],
+          
+          
+
+        ]);
+
+        var options = {
+          title: 'Total Corruption Cases in Three years from Southern region',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+    <div class="chart"></div>
+        }
+    </div>
+  </body>
+</html> 
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'year-2017', 'year-2018', 'year-2019'],
+          ['Karnataka', 289, 378, 379],
+          ['Telangana', 55, 139, 177],
+          ['Andhra Pradesh', 199, 151, 123],
+          ['Tamil Nadu', 257, 264, 418],
+          ['Kerala', 142, 92, 92],
+          
+
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Corruption cases in Southern Region',
+            subtitle: '3 year data',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+  </body>
+</html>

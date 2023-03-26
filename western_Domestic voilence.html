@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['task', 'Hours per Day'],
+          ['Rajasthan',  69874],
+          ['Madhya Pradesh', 9525],
+          ['Gujarat',  11335],
+          ['Maharashtra', 44481],
+          ['Chhattisgarh',  5314],
+        
+          
+
+        ]);
+
+        var options = {
+          title: 'Total Domestic voilence Cases in Three years from Western region',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+    <div class="chart"></div>
+        }
+    </div>
+  </body>
+</html> 
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'year-2017', 'year-2018', 'year-2019'],
+          ['Rajasthan', 21645, 21309, 26920],
+          ['Madhya Pradesh', 3218, 2955, 3352],
+          ['Gujarat', 3477, 4049, 3809],
+          ['Maharashtra', 13941, 14854, 15686],
+          ['Chhattisgarh', 1719, 1871, 1724],
+          
+
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Domestic voilence cases in Western Region',
+            subtitle: '3 year data',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+  </body>
+</html>

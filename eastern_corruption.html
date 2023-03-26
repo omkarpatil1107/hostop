@@ -1,0 +1,77 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['task', 'Hours per Day'],
+          ['Bihar', 268  ],
+          ['Jharkhand',  337],
+          ['Odisha',  1276],
+          ['West Bengal', 33],
+          ['Meghalaya',  7],
+          ['Assam', 70],
+          ['Nagaland', 29],
+          ['Arunachal pradesh', 42],
+          ['Mizoram', 14],          
+
+        ]);
+
+        var options = {
+          title: 'Total Corruption Cases in Three years from Eastern region',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px; margin:200px; width: 1500px; height: 500px;"></div>
+    <div class="chart"></div>
+        }
+    </div>
+  </body>
+</html> 
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['State', 'year-2017', 'year-2018', 'year-2019'],
+          ['Biharr', 128, 69, 71],
+          ['Jharkhand', 170, 90, 77],
+          ['Odisha', 494, 429, 353],
+          ['West bengal', 15, 9, 9],
+          ['Meghalaya', 1, 1, 5],
+          ['Assam', 27, 25, 18],
+          ['Nagaland', 12, 16, 1],
+          ['Arunachal pradesh', 11, 18, 13],
+          ['Mizoram', 5, 7, 2],
+
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Corruption cases in Eastern Region',
+            subtitle: '3 year data',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div id="columnchart_material" style="width: 900px; height: 500px; margin:200px; width: 1000px; height: 500px;"></div>
+  </body>
+</html>
